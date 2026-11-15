@@ -1,0 +1,15 @@
+vosk
+sounddevice
+pyttsx3
+pyautogui
+pyperclip
+psutil
+pillow
+pypdf
+python-docx
+ddgs
+pygetwindow
+uiautomation
+winocr
+faster-whisper
+piper-tts

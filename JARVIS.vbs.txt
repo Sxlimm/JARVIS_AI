@@ -1,0 +1,7 @@
+Set WshShell = CreateObject("WScript.Shell")
+Set FSO = CreateObject("Scripting.FileSystemObject")
+
+Dossier = FSO.GetParentFolderName(WScript.ScriptFullName)
+WshShell.CurrentDirectory = Dossier
+
+WshShell.Run """C:\Users\farah\AppData\Local\Programs\Python\Python311\pythonw.exe"" ""jarvis.py""", 0, False

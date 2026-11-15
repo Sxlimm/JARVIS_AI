@@ -1,0 +1,52 @@
+2026-11-10 23:44:21,392 INFO Imported existing <module 'comtypes.gen' from 'C:\\Users\\farah\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-10 23:44:21,393 INFO Using writeable comtypes cache directory: 'C:\Users\farah\AppData\Local\Programs\Python\Python311\Lib\site-packages\comtypes\gen'
+2026-11-11 00:32:46,636 INFO Imported existing <module 'comtypes.gen' from 'C:\\Users\\farah\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 00:32:46,637 INFO Using writeable comtypes cache directory: 'C:\Users\farah\AppData\Local\Programs\Python\Python311\Lib\site-packages\comtypes\gen'
+2026-11-11 00:45:43,183 INFO Imported existing <module 'comtypes.gen' from 'C:\\Users\\farah\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 00:45:43,194 INFO Using writeable comtypes cache directory: 'C:\Users\farah\AppData\Local\Programs\Python\Python311\Lib\site-packages\comtypes\gen'
+2026-11-11 15:02:28,636 INFO Imported existing <module 'comtypes.gen' from 'C:\\Users\\farah\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 15:02:28,642 INFO Using writeable comtypes cache directory: 'C:\Users\farah\AppData\Local\Programs\Python\Python311\Lib\site-packages\comtypes\gen'
+2026-11-11 15:03:28,382 INFO Imported existing <module 'comtypes.gen' from 'C:\\Users\\farah\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 15:03:28,383 INFO Using writeable comtypes cache directory: 'C:\Users\farah\AppData\Local\Programs\Python\Python311\Lib\site-packages\comtypes\gen'
+2026-11-11 16:47:21,734 INFO Imported existing <module 'comtypes.gen' from 'C:\\Users\\farah\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 16:47:21,750 INFO Using writeable comtypes cache directory: 'C:\Users\farah\AppData\Local\Programs\Python\Python311\Lib\site-packages\comtypes\gen'
+2026-11-11 17:27:08,283 INFO Imported existing <module 'comtypes.gen' from 'C:\\Users\\farah\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 17:27:08,284 INFO Using writeable comtypes cache directory: 'C:\Users\farah\AppData\Local\Programs\Python\Python311\Lib\site-packages\comtypes\gen'
+2026-11-11 17:39:29,567 INFO Imported existing <module 'comtypes.gen' from 'C:\\Users\\farah\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 17:39:29,590 INFO Using writeable comtypes cache directory: 'C:\Users\farah\AppData\Local\Programs\Python\Python311\Lib\site-packages\comtypes\gen'
+2026-11-11 17:53:42,116 INFO Imported existing <module 'comtypes.gen' from 'C:\\Users\\farah\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-11 17:53:42,117 INFO Using writeable comtypes cache directory: 'C:\Users\farah\AppData\Local\Programs\Python\Python311\Lib\site-packages\comtypes\gen'
+2026-11-11 17:55:38,987 INFO response: https://fr.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=googel%20maps 200
+2026-11-11 17:55:38,988 INFO response: https://grokipedia.com/api/typeahead?query=googel+maps&limit=1 200
+2026-11-11 17:55:39,296 INFO response: https://fr.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&titles=Google%20Maps&explaintext=0&exintro=0&redirects=1 200
+2026-11-11 17:55:40,571 INFO response: https://html.duckduckgo.com/html/ 202
+2026-11-11 17:55:40,836 INFO response: https://search.brave.com/search?q=googel+maps&source=web 429
+2026-11-11 17:55:41,728 INFO response: https://search.yahoo.com/search;_ylt=DMUDot8ZQ8b7sO0GvAZ2EgzF;_ylu=G9iFnLQDU4XG867mcKxsJvc1jGahVC90E0dDw1wuAuHeV8A?p=googel+maps 200
+2026-11-12 18:03:29,808 INFO Imported existing <module 'comtypes.gen' from 'C:\\Users\\farah\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-12 18:03:29,836 INFO Using writeable comtypes cache directory: 'C:\Users\farah\AppData\Local\Programs\Python\Python311\Lib\site-packages\comtypes\gen'
+2026-11-15 19:49:03,144 INFO Imported existing <module 'comtypes.gen' from 'C:\\Users\\farah\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-15 19:49:03,154 INFO Using writeable comtypes cache directory: 'C:\Users\farah\AppData\Local\Programs\Python\Python311\Lib\site-packages\comtypes\gen'
+2026-11-15 19:56:20,923 INFO Imported existing <module 'comtypes.gen' from 'C:\\Users\\farah\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-15 19:56:20,925 INFO Using writeable comtypes cache directory: 'C:\Users\farah\AppData\Local\Programs\Python\Python311\Lib\site-packages\comtypes\gen'
+2026-11-15 19:56:21,667 ERROR Erreur non gérée
+Traceback (most recent call last):
+  File "C:\Users\farah\Downloads\JARVIS_HP_V5 - Copie\JARVIS_HP_V5\jarvis (1).py", line 2501, in <module>
+    app = JarvisV4(root)
+          ^^^^^^^^^^^^^^
+  File "C:\Users\farah\Downloads\JARVIS_HP_V5 - Copie\JARVIS_HP_V5\jarvis (1).py", line 298, in __init__
+    self.piper = pc_voix.Piper(os.path.join(DOSSIER_VOIX, VOIX_PIPER))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 108, in join
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+2026-11-15 19:56:38,765 INFO Imported existing <module 'comtypes.gen' from 'C:\\Users\\farah\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-11-15 19:56:38,766 INFO Using writeable comtypes cache directory: 'C:\Users\farah\AppData\Local\Programs\Python\Python311\Lib\site-packages\comtypes\gen'
+2026-11-15 19:56:39,210 ERROR Erreur non gérée
+Traceback (most recent call last):
+  File "C:\Users\farah\Downloads\JARVIS_HP_V5 - Copie\JARVIS_HP_V5\jarvis (1).py", line 2501, in <module>
+    app = JarvisV4(root)
+          ^^^^^^^^^^^^^^
+  File "C:\Users\farah\Downloads\JARVIS_HP_V5 - Copie\JARVIS_HP_V5\jarvis (1).py", line 298, in __init__
+    self.piper = pc_voix.Piper(os.path.join(DOSSIER_VOIX, VOIX_PIPER))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 108, in join
+TypeError: expected str, bytes or os.PathLike object, not NoneType

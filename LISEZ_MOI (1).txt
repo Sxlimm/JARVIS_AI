@@ -1,0 +1,263 @@
+JARVIS — ASSISTANT VOCAL LOCAL (version autonome)
+
+INSTALLATION (une seule fois)
+1. Installez Python 3.11 (cochez « Add to PATH ») et Ollama (https://ollama.com).
+2. Double-cliquez sur INSTALLER.bat : il installe les paquets, télécharge le modèle vocal
+   et le modèle Ollama, puis active le démarrage automatique avec Windows.
+3. Double-cliquez sur JARVIS.vbs pour le lancer tout de suite.
+
+AUTONOMIE
+- Se lance tout seul avec Windows (sans fenêtre).
+- Démarre Ollama lui-même s'il ne tourne pas, et précharge le modèle.
+- Se reconnecte tout seul si le micro est débranché puis rebranché.
+- Ne s'entend pas parler : le micro est ignoré pendant qu'il répond.
+- Les erreurs sont écrites dans jarvis.log (utile car il tourne sans fenêtre).
+- Pour retirer le démarrage automatique : RETIRER_DEMARRAGE_AUTO.bat.
+
+COMMANDES (dites « JARVIS » puis la demande)
+Informations sur le PC
+- État du PC, RAM, processeur, espace disque, batterie, réseau, carte graphique,
+  quels programmes sont gourmands, depuis quand le PC est allumé
+Contrôle du PC
+- Monte / baisse le volume, volume à cinquante, volume au maximum, coupe le son
+- Mets pause, musique suivante, musique précédente
+- Capture d'écran (enregistrée dans Images\JARVIS), affiche le bureau
+- Luminosité à cinquante (écrans d'ordinateur portable)
+- Verrouille le PC
+- Mets le PC en veille, redémarre le PC, éteins le PC, annule l'extinction
+- Mode jeu (performances maximales + ferme OneDrive et Teams) / fin du mode jeu
+- Ouvre mes téléchargements / mes documents / le bureau / mes images
+Applications et web
+- Ouvre n'importe quel logiciel installé : « ouvre Godot », « ouvre Steam », « ouvre Word »...
+  (applications classiques, Microsoft Store et raccourcis du Bureau)
+- Quels logiciels as-tu ? / Relis mes logiciels
+- Ouvre WhatsApp et Gmail (plusieurs à la fois), YouTube, Google, Wikipédia...
+- Trouve-moi une vidéo sur mon wifi qui se déconnecte / J'ai un problème avec mon écran, trouve une vidéo
+- Trouve une vidéo là-dessus (reprend le dernier problème posé) / Ouvre la première, la deuxième...
+- Cherche la définition de ... / Quelle est la capitale de l'Australie ? (réponse trouvée sur Internet)
+- Quelle est la météo ? / Météo à Paris
+Code (voir plus bas)
+- Écris un script Python qui renomme des fichiers / Crée un jeu en HTML / Fais une fonction GDScript...
+- Écris un script GDScript pour que le joueur saute (Godot 4)
+- Colle le code dans Godot / dans Visual Studio Code / dans le Bloc-notes
+- Écris un script GDScript pour sauter dans Godot (écrit puis envoie le code)
+- Ouvre le code / Copie le code / Lance le code / Ajoute un commentaire (modification du dernier code)
+Écran, souris et clavier (voir plus bas)
+- Que vois-tu ? / Regarde l'écran / Lis l'écran
+- Clique sur Enregistrer / Double clique sur ... / Clic droit sur ...
+- Écris bonjour (tapé lettre par lettre, on le voit)
+- Prends le contrôle et ouvre les paramètres / Utilise l'ordinateur pour créer un nouveau dossier
+- Stop (arrête tout)
+Rappels et minuteurs
+- Mets un minuteur de 10 minutes pour les pâtes / Rappelle-moi dans une heure et demie d'appeler Karim
+- Rappelle-moi demain à 8h de prendre mon médicament / Réveille-moi à 7h30
+- Quels sont mes rappels / Annule le minuteur / Annule tous mes rappels / Reporte de 5 minutes
+Fichiers et logiciels ouverts
+- Cherche mon CV / Où est ma facture EDF / Cherche mes photos / Cherche mes pdf récents
+- Ouvre le premier (ou la deuxième) / Montre le premier dans son dossier
+- Ferme Chrome / Quitte Word / Ferme Chrome de force (« JARVIS oui » obligatoire)
+Diagnostic
+- Fais un diagnostic (écrit diagnostic.txt : à m'envoyer si quelque chose ne marche pas)
+Messages
+- Ajoute le contact Karim numéro 06 12 34 56 78 / Ajoute le contact Lucie email lucie@exemple.fr (de préférence écrit)
+- Envoie un message à Karim que j'arrive en retard / Dis à Maman que je rentre ce soir
+- Envoie un message à Karim : on se voit à 18h (texte repris tel quel quand tu utilises « : »)
+- Écris un mail à Monsieur Dupont pour demander un rendez-vous (« poli » ou « formel » = vouvoiement)
+- Envoie le message / Modifie le message : ... / Annule le message / Quels sont mes contacts
+Optimiser Windows
+- Optimise mon PC / Mon PC est lent / Comment optimiser Windows (analyse : mémoire, disque, démarrage...)
+- Nettoie le PC (fichiers temporaires, après accord) / Vide la corbeille (« JARVIS oui » obligatoire)
+- Quels programmes démarrent avec Windows ? / Désactive Spotify au démarrage / Réactive Spotify au démarrage
+Calculs, conversions et dates (réponses exactes, calculées par le programme)
+- Combien font quinze fois vingt-trois / 20 % de 150 / racine carrée de 144 / 2 puissance 10
+- 80 euros avec 15 % de remise / Convertis 10 miles en kilomètres / 100 degrés Fahrenheit en Celsius
+- Dans combien de jours est Noël / Quel jour sera le 25 décembre 2026 / Quel jour sera-t-on dans 100 jours
+- Combien de jours entre le 1er janvier et le 15 mars / Quel âge ai-je si je suis né le 3 mai 2005
+Raisonnement
+- Réfléchis bien : si un train roule à 60 km/h pendant 2 heures, combien de kilomètres parcourt-il ?
+- Étape par étape / Explique ton raisonnement / Prends ton temps
+Maison connectée et modèles
+- Allume la lumière du salon / Éteins la lampe de la chambre / Ferme les volets / Mets la lumière à 50 pour cent
+- Quels modèles as-tu ? / Utilise le modèle 3b
+Documents (voir plus bas)
+- Dans mes documents, quand est la réunion de famille ?
+- Quels documents as-tu ? / Relis mes documents
+Mémoire et veille
+- Souviens-toi que ... / Qu'as-tu retenu ? / Efface ma mémoire
+- Mets-toi en veille / JARVIS réveille-toi
+- JARVIS ferme-toi : arrête complètement le programme
+
+VIDÉOS POUR RÉSOUDRE UN PROBLÈME
+Décris ton problème (à JARVIS ou dans la demande) puis dis « trouve-moi une vidéo » : il cherche des
+tutoriels YouTube, lit à voix haute les trois premiers titres avec leur durée, puis tu dis « ouvre la
+première », « la deuxième »... et la vidéo s'ouvre dans ton navigateur. « Ouvre une vidéo sur ... »
+ouvre directement la première. Les liens des 5 résultats s'affichent dans la fenêtre.
+S'il ne peut pas lire les résultats, il ouvre la recherche YouTube dans le navigateur.
+
+MEILLEUR MODÈLE QWEN POUR TON PC
+- PC avec 8 Go de RAM ou moins : ollama pull qwen3.5:2b  (repli : ollama pull qwen2.5:3b-instruct)
+- PC avec 16 Go de RAM : ollama pull qwen3.5:4b  (qwen3.5:9b si le processeur est rapide)
+Puis dis « JARVIS utilise le modèle qwen3.5 » ou change MODEL_NAME en haut de jarvis.py. Les modèles qui
+pensent (qwen3, qwen3.5) sont utilisés SANS pensée en conversation, pour rester rapides ; la pensée n'est
+activée que par le mode réflexion.
+
+RAPPELS ET MINUTEURS
+Ils sont sauvegardés dans rappels.json : un rappel prévu pendant que JARVIS est éteint est annoncé à son
+prochain démarrage (« j'ai manqué ceci »). À l'heure dite, JARVIS sonne et parle, deux fois. JARVIS
+dit toujours l'heure comprise (« demain à 8 h 00 ») : corrige-le s'il se trompe. « À 6h » le soir veut dire
+18h ; « réveille-moi à 7h30 » vise toujours le matin.
+
+RECHERCHE DE FICHIERS
+Elle porte sur les noms de fichiers (jamais leur contenu), dans Bureau, Documents, Téléchargements, Images,
+Vidéos, Musique, OneDrive et les dossiers de DOSSIERS_RECHERCHE (jarvis.py). Un programme ou un script
+(.exe, .bat, .vbs...) n'est jamais ouvert : JARVIS montre seulement son dossier.
+
+FERMER UN LOGICIEL
+JARVIS demande poliment à chaque fenêtre de se fermer (comme la croix) : le logiciel peut te proposer
+d'enregistrer. « De force » termine le processus sans prévenir et exige « JARVIS oui ». Les processus
+système (explorateur, antivirus...) ne sont jamais terminés.
+
+DIAGNOSTIC
+« Fais un diagnostic » vérifie 15 éléments (paquets, micro, modèle vocal, Ollama et sa vitesse réelle, Whisper,
+voix, lecture d'écran, interface web, Internet, données, Home Assistant) et écrit diagnostic.txt. Il ne
+contient ni jeton, ni contact, ni message ; les chemins personnels sont masqués.
+
+MESSAGES (WHATSAPP, E-MAIL)
+JARVIS rédige le message (l'IA locale), te lit le brouillon, puis, après ton « oui », ouvre WhatsApp ou ta
+messagerie avec le texte déjà écrit. Par défaut c'est TOI qui appuies sur Entrée ou sur Envoyer : rien ne
+part sans ton geste. ENVOI_AUTOMATIQUE = True dans jarvis.py le fait appuyer sur Entrée à ta place (WhatsApp
+seulement), mais il faut alors dire « JARVIS oui ».
+- Les contacts sont dans contacts.json, à côté du programme : ils restent sur ton PC, ne partage pas ce fichier.
+- Les numéros qui commencent par 0 prennent l'indicatif CODE_PAYS (33 = France) ; « +44... » fonctionne aussi.
+- Dis les numéros avec prudence : la voix se trompe souvent sur les chiffres, écris-les dans la fenêtre.
+- Pas de SMS depuis le PC (WhatsApp à la place). JARVIS ne lit pas tes messages reçus.
+
+OPTIMISER WINDOWS EN SÉCURITÉ
+JARVIS analyse le PC et donne des conseils chiffrés : mémoire presque pleine, disque trop plein, trop de
+programmes au démarrage, PC allumé depuis des jours, mode d'économie d'énergie, fichiers temporaires.
+- Il ne supprime que les fichiers temporaires de plus d'un jour, uniquement dans les dossiers TEMP, après ton
+  accord, et ignore ceux qui sont en cours d'utilisation.
+- Désactiver un programme au démarrage est réversible (« réactive ... au démarrage »). JARVIS et les
+  antivirus sont protégés. Les programmes installés « pour tous les utilisateurs » se règlent dans le
+  Gestionnaire des tâches, onglet Démarrage.
+- Il ne fait volontairement PAS de « nettoyage de registre » ni de désactivation de services : ces
+  « boosters » font gagner très peu et peuvent casser Windows.
+- Avec 5,7 Go de RAM, la meilleure optimisation reste matérielle : 16 Go de RAM, et un SSD si besoin.
+
+RAISONNEMENT : COMMENT JARVIS RAISONNE MIEUX
+Un petit modèle se trompe souvent en calculant ou en raisonnant. JARVIS s'appuie donc sur trois choses :
+1. Des outils exacts : calculs, pourcentages, remises, conversions d'unités et dates sont calculés par le
+   programme, jamais devinés par l'IA (même quand tu les dis en lettres : « vingt-trois fois quinze »).
+2. Le mode réflexion : sur les petits problèmes chiffrés, ou si tu dis « réfléchis bien », l'IA raisonne
+   pas à pas, vérifie, puis donne une « Réponse finale ». Le détail du raisonnement s'affiche dans la
+   fenêtre ; seule la réponse est dite à voix haute. Compte une à quelques minutes sur un petit PC.
+3. Un modèle qui pense (facultatif) : ollama pull qwen3:4b, puis MODEL_REFLEXION = "qwen3:4b" en haut de
+   jarvis.py. Bien meilleur en logique et en maths, mais lent : à réserver aux vraies questions difficiles.
+JARVIS dit aussi « je ne sais pas » plutôt que d'inventer. Pour le reste, le modèle de conversation compte
+beaucoup : qwen2.5:3b-instruct est nettement meilleur que le 1.5b.
+
+VOIX : WHISPER ET PIPER
+- Whisper : quand Vosk repère « JARVIS », la phrase est retranscrite par Whisper (modèle « base »), bien
+  meilleur pour les noms étrangers (Godot, Steam...) et les nombres. Il se charge au démarrage ; compter
+  2 à 4 secondes de plus par commande sur un petit processeur. WHISPER_ACTIF = False pour le couper,
+  WHISPER_TAILLE = "tiny" pour aller plus vite.
+- Piper : voix naturelle (voix Siwis, licence CC-BY 4.0) dans le dossier « voix ». Sans elle, JARVIS garde
+  la voix Windows. VOIX_PIPER permet de changer de voix.
+
+INTERFACE WEB ET TÉLÉPHONE
+JARVIS démarre une page de discussion (adresse et jeton affichés dans sa fenêtre). Sur le PC :
+http://127.0.0.1:8765/?jeton=... Les réponses s'écrivent dans la page, sans parole.
+- Téléphone : mets ACCES_RESEAU = True dans jarvis.py, installe Tailscale (gratuit) sur le PC et le
+  téléphone, puis ouvre http://adresse-tailscale-du-PC:8765/?jeton=... Le trafic reste dans ton réseau privé.
+- N'ouvre JAMAIS ce port sur Internet depuis ta box. Garde le fichier jarvis_jeton.txt secret : celui qui
+  l'a peut commander ton PC. Les actions sensibles (éteindre, redémarrer, lancer du code, bouton
+  Supprimer...) restent à confirmer sur le PC lui-même.
+
+MAISON CONNECTÉE (HOME ASSISTANT)
+Si tu as Home Assistant, renseigne HA_URL et HA_JETON (jeton d'accès longue durée de ton profil) en haut de
+jarvis.py. JARVIS commande alors lumières, volets, prises, chauffage. Il ne devine jamais l'appareil :
+sans précision (« allume la lumière »), il demande lequel.
+
+VOIR L'ÉCRAN ET UTILISER LA SOURIS ET LE CLAVIER
+JARVIS lit l'écran sans modèle d'image lourd : la liste des boutons, menus et zones de texte de la
+fenêtre active (UI Automation de Windows) et le texte affiché (OCR de Windows, paquet winocr). Tout
+reste sur ton PC. Il réduit sa fenêtre, puis agit de façon visible : cadre rouge autour de la cible,
+souris qui glisse lentement, texte tapé lettre par lettre, bandeau rouge « JARVIS contrôle la souris
+et le clavier » avec un bouton ARRÊTER.
+- « Clique sur X » : il cherche X à l'écran, le surligne, puis clique.
+- « Prends le contrôle et ... » : l'IA choisit une action à la fois (10 étapes au maximum).
+  Par défaut il demande « oui » avant CHAQUE étape. Avec « en mode automatique » il agit après un
+  compte à rebours de 3 secondes, en s'arrêtant au mot « stop ».
+- Sécurités : « stop » à la voix (sans dire JARVIS), bouton ARRÊTER, ou souris dans le coin haut
+  gauche de l'écran. Il n'écrit jamais dans un champ de mot de passe. Les boutons Supprimer,
+  Envoyer, Payer, Acheter, Formater... et les raccourcis qui ferment ou suppriment exigent
+  « JARVIS oui », même en mode automatique.
+- Limites : le petit modèle se trompe souvent sur les tâches longues (essayez qwen2.5:3b-instruct et
+  mettez MODEL_AGENT en haut de jarvis.py). Dans un jeu ou Godot, qui dessinent eux-mêmes leur
+  interface, il ne lit que le texte (OCR). « Regarde vraiment l'écran » utilise une vraie analyse
+  d'image si vous installez ollama pull moondream (lent, 1 à 2 minutes).
+- Ne l'utilisez pas quand un écran montre des informations sensibles (banque, mots de passe).
+
+LOGICIELS
+JARVIS lit la liste des applications du menu Démarrer, les raccourcis du Bureau et les dossiers
+indiqués dans DOSSIERS_LOGICIELS (jarvis.py), pour les logiciels portables ou les jeux. Nom sûr :
+il ouvre tout de suite. Nom approximatif : il demande « oui » ou « non » avant d'ouvrir.
+Le modèle vocal français comprend mal les noms étrangers (Godot, Steam...) : regardez ce qu'il a
+entendu dans la fenêtre (ligne VOUS) et ajoutez-le à ALIAS_LOGICIELS dans jarvis.py.
+
+RECHERCHE SUR INTERNET
+Quand tu poses une question factuelle (qui, quoi, quel, combien, comment, pourquoi, « cherche ... »),
+JARVIS cherche sur le web (DuckDuckGo, Wikipédia), lit les meilleures pages, puis l'IA locale rédige la
+réponse. Les adresses des sources s'affichent dans la fenêtre. Pour la conversation (« bonjour »,
+« tu peux coder ? »), il répond sans chercher.
+- « Cherche ... sur Google » ouvre le navigateur à la place.
+- « Mode hors ligne » désactive la recherche web ; « mode en ligne » la réactive.
+- Confidentialité : seul le texte de ta question part vers le moteur de recherche et les sites
+  consultés. Tes documents, ton micro et les réponses restent sur ton PC.
+- La qualité dépend du petit modèle : un modèle plus gros (3b) résume mieux les pages.
+
+ÉCRIRE DU CODE
+JARVIS écrit du code avec un modèle spécialisé (qwen2.5-coder), l'enregistre dans le dossier
+« mes_codes » et ne le lit pas à voix haute : il affiche le code dans la fenêtre et résume en une
+phrase. Langages : Python, JavaScript, HTML, CSS, Java, C++, C#, PowerShell, Bash, SQL, GDScript...
+- Sur un PC modeste, comptez de 1 à 5 minutes selon la longueur (la progression s'affiche).
+- « Ouvre le code » l'ouvre dans le Bloc-notes, « copie le code » le met dans le presse-papiers.
+- « Lance le code » (Python ou HTML) demande une autorisation : pour Python il faut dire
+  « JARVIS oui », car un script écrit par une IA peut contenir des erreurs. Relisez-le avant.
+- GDScript : JARVIS écrit pour Godot 4 (@export, @onready, CharacterBody, move_and_slide()) et
+  dit à quel nœud attacher le script. Pour qu'il enregistre les scripts directement dans votre projet,
+  renseignez DOSSIER_GODOT en haut de jarvis.py ; Godot les voit au retour sur sa fenêtre.
+  LANGAGE_PAR_DEFAUT = "gdscript" évite de préciser le langage à chaque fois.
+- CODER DIRECTEMENT DANS UN LOGICIEL : « colle le code dans Godot » trouve (ou ouvre) la fenêtre, demande
+  « oui », puis colle le code à l'endroit du curseur. JARVIS ne voit pas l'écran : ouvrez d'abord le
+  fichier ou le script voulu dans le logiciel. « Remplace le contenu de Godot par le code » efface tout
+  avant de coller : il faut dire « JARVIS oui » (Ctrl+Z annule). Jamais dans un terminal, car le code
+  s'y exécuterait aussitôt.
+- Pour de meilleurs codes si votre PC le permet : ollama pull qwen2.5-coder:3b, puis changez
+  MODEL_CODE en haut de jarvis.py.
+
+MES DOCUMENTS
+Copiez vos fichiers (.txt, .md, .csv, .pdf, .docx) dans le dossier « mes_documents » à côté de
+jarvis.py. JARVIS les lit au démarrage (« Relis mes documents » pour mettre à jour), retrouve les
+passages utiles et laisse l'IA répondre uniquement à partir de ceux-ci. Seul ce dossier est lu ;
+pour en ajouter un autre, modifiez la ligne DOSSIERS_DOCS en haut de jarvis.py.
+Les PDF scannés (images) ne sont pas lisibles : il faut un PDF avec du texte.
+
+CONFIRMATIONS
+Les ouvertures d'applications demandent une autorisation : dites simplement « oui » ou « non »
+(ou cliquez). Pour l'extinction et le redémarrage du PC, dites « JARVIS oui » : le mot JARVIS est obligatoire,
+pour qu'un « oui » entendu à la télé ne puisse pas éteindre l'ordinateur.
+Sans réponse en 30 secondes, l'action est refusée.
+
+MÉMOIRE
+Tout est dans jarvis_memory.json, à côté du programme. Copiez-le pour changer de PC.
+
+PC AVEC PEU DE MÉMOIRE (8 Go)
+Le petit modèle qwen2.5:1.5b convient. Les gros modèles (20 milliards de paramètres) demandent
+environ 16 Go ou plus. Si JARVIS comprend mal tes questions, essaie qwen2.5:3b-instruct :
+ollama pull qwen2.5:3b-instruct, puis change MODEL_NAME en haut de jarvis.py.
+
+LIMITES
+- La reconnaissance dépend du micro et du modèle Vosk français.
+- Pendant qu'il parle, il n'entend pas : attendez la fin de sa réponse.
+- La recherche web, la météo et l'installation nécessitent Internet ; tout le reste est local.
